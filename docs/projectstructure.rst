@@ -4,7 +4,7 @@ A project structure
 ====================
 
 This chapter explains a full Python project structure. What kind of directory layout
-you can use and how make release a software to the world. 
+you can use and how make release a software to the world.
 
 We will call our example project *factorial*.
 ::
@@ -17,7 +17,7 @@ Primary code
 
 The name of the Python module will be *myfact*, so we will create the directory next.
 ::
-    
+
     $ mkdir myfact
 
 The primary code will be in a file called *fact.py*
@@ -36,7 +36,7 @@ The primary code will be in a file called *fact.py*
         if num >= 0:
             if num == 0:
                 return 1
-            return num * fact(num -1)
+            return num * factorial(num -1)
         else:
             return -1
 
@@ -49,7 +49,7 @@ We also have a *__init__.py* file for the module.
 We also added a *README.rst* file. So, the directory structure looks like
 ::
 
-    $ ls 
+    $ ls
     myfact  README.rst
     $ ls myfact/
     fact.py  __init__.py
@@ -104,6 +104,8 @@ understand *description* and *long_description*. *platforms* is a list of the pl
 this module can work on. *find_packages* is a special function which can find
 all modules under your source directory.
 
+.. note:: To learn more you can read the `packaging docs <https://packaging.python.org/en/latest/distributing.html>`_.
+
 
 Usage of setup.py
 ==================
@@ -154,12 +156,13 @@ To install from the source use the following command.
 
     $ python setup.py install
 
+.. note:: To learn more, read from `packaging.python.org <https://packaging.python.org/en/latest/distributing.html>`_.
 
 Python Package Index (PyPI)
 ============================
 
 Do you remember the *pip* command we are using still now? Ever thought from where those packages
-are coming from? The answer is `PyPI <http://pypi.python.org/pypi>`_. It is a 
+are coming from? The answer is `PyPI <http://pypi.python.org/pypi>`_. It is a
 repository of software for the Python programming language.
 
 For our example, we will use the test server of PyPI which is `https://testpypi.python.org/pypi <https://testpypi.python.org/pypi>`_
@@ -167,7 +170,7 @@ For our example, we will use the test server of PyPI which is `https://testpypi.
 Creating account
 -----------------
 
-First register yourself in `this link <https://testpypi.python.org/pypi?%3Aaction=register_form>`_. You will 
+First register yourself in `this link <https://testpypi.python.org/pypi?%3Aaction=register_form>`_. You will
 receive an email with a link, go to that link and confirm your registration.
 
  .pypirc file
@@ -188,7 +191,7 @@ receive an email with a link, go to that link and confirm your registration.
 
 Replace <username> and <password> with your newly created account details.
 
-.. note:: Remember to change the name of the project to something else in the `setup.py`to test following instructions. 
+.. note:: Remember to change the name of the project to something else in the `setup.py`to test following instructions.
 
 Registering your project
 -------------------------
